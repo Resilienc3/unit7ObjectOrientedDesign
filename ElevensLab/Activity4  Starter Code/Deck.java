@@ -66,10 +66,10 @@ public class Deck {
         {
             int r = (int)(Math.random()*k) + 1;
             Card holder = cards.get(r);
-            cards.get(r) = cards.get(k);
-            cards.get(k) = holder;
+            cards.set(r,cards.get(k));
+            cards.set(k,holder);
         }
-        size = cards.length;
+        size = cards.size();
 	}
 
 	/**
